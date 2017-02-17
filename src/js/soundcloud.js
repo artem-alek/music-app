@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import { GH_TOKEN } from './token';
 
 function getData (query) {
   return $.ajax({

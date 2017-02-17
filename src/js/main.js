@@ -1,12 +1,15 @@
 import $ from 'jquery';
-import { GH_TOKEN } from './token';
 import { trackTemplate } from './trackTemplate';
 import { submitButton } from './submitButtons';
 
 $('form').submit(submitButton);
 
-// var piano = "piano";
-// getData(piano);
+function submitButton (event) {
+  event.preventDefault();
+  var query = $('#track-input').val();
+  getData(query).then(setData);
+
+}
 
 function setData (data) {
   var result = {};
