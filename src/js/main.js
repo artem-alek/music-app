@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import { trackTemplate } from './trackTemplate';
-import { submitButton } from './submitButtons';
+import { getData } from './soundcloud'
 
 $('form').submit(submitButton);
 
