@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import { GH_TOKEN } from './token';
+import { trackTemplate } from './trackTemplate'
 
 function getData (query) {
   return $.ajax({
@@ -31,7 +32,8 @@ function setData (data) {
     result.trackTitle = info.title;
     result.artWork = info.artwork_url;
     result.bandName = info.user.username;
-    $('.tracks-container').append(trackTemple(result))
+    $('.tracks-container').append(trackTemplate(result));
   }
-  console.log(result);
 }
+
+export { setData };
