@@ -1,24 +1,7 @@
 import $ from 'jquery';
 import { GH_TOKEN } from './token';
-import { trackTemplate } from './trackTemplate'
-
-function getData (query) {
-  return $.ajax({
-    url: `https://api.soundcloud.com/tracks/?client_id=${GH_TOKEN}`,
-    dataType: 'json',
-    //success: console.log,
-    data: {
-      q: query
-    }
-  });
-}
-
-function submitButton (event) {
-  event.preventDefault();
-  var query = $('#track-input').val();
-  getData(query).then(setData);
-
-}
+import { trackTemplate } from './trackTemplate';
+import { submitButton } from './submitButtons';
 
 $('form').submit(submitButton);
 
