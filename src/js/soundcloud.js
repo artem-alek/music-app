@@ -12,4 +12,4 @@ function getData (query) {
   });
 }
 
-export { getdata };
+export { getData };
